@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nouro's Eateria</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
   <body>
-    <header>
+
+    <header style="display: flex; align-items: center; justify-content: space-between; position: fixed; top: 0; left: 0; right: 0; background: white; z-index: 1000;">
       <h1>Nouro's Eateria</h1>
       <nav>
-        <ul>
+        <ul class="navbar">
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Shop</a></li>
           <li><a href="about.html">About</a></li>
@@ -19,7 +20,10 @@
       </nav>
     </header>
     <main>
-      <div id="opening-photo"><img src="assets/images/pexels-yente-van-eynde-1263034-2403392.jpg" alt="Opening Photo" /><h2>Made By Love ❤</h2></div>
+      <div>
+        <img id="opening-photo" src="assets/images/pexels-yente-van-eynde-1263034-2403392.jpg" alt="Opening Photo" />
+        <h2>Made By Love ❤</h2>
+      </div>
       <section id="products">
         <h2>Featured Products</h2>
         <!-- Product items will go here -->

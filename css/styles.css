@@ -1,0 +1,55 @@
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    list-style-type: none;
+    padding: 0;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer; 
+}
+
+#opening-photo {
+    position: relative; /* Enable positioning for child elements */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#opening-photo + h2 {
+    position: absolute; /* Position the text over the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true center */
+    color: white; /* Ensure text is visible */
+    font-size: 2rem; /* Adjust font size as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+}
+
+@media (max-width: 768px) {
+    #opening-photo + h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #opening-photo {
+        height: auto; /* Ensure the image scales properly */
+    }
+}
+
+@media (max-width: 480px) {
+    #opening-photo + h2 {
+        font-size: 1.2rem; /* Further reduce font size for very small screens */
+    }
+}

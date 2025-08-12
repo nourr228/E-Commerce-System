@@ -1,55 +1,101 @@
 body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-    display: flex; 
-    align-items: center; 
-    gap: 20px; 
-    list-style-type: none;
-    padding: 0;
-    margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+  margin-right: 50px;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  padding: 5px;
+  padding-left: 30px;
+  flex-shrink: 1;
+  flex-grow: 0;
+  font-size: clamp(1.4rem, 3.2vw + 0.5rem, 3.2rem);
+  line-height: 1.1;
 }
 
 a {
-    text-decoration: none;
-    color: inherit; 
-    cursor: pointer; 
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: larger;
+}
+
+.hero {
+  position: relative;
 }
 
 #opening-photo {
-    position: relative; /* Enable positioning for child elements */
-    width: 100%;
-    height: auto;
-    display: block;
+  display: block;
+  width: 100%;
+  height: fixed;
+  background-color: grey;
+  max-width: 100%;
 }
 
-#opening-photo + h2 {
-    position: absolute; /* Position the text over the image */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for true center */
-    color: white; /* Ensure text is visible */
-    font-size: 2rem; /* Adjust font size as needed */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(2rem, 6vw, 4rem);
+  padding: 0 1rem;
+  flex-shrink: 1;
 }
 
 @media (max-width: 768px) {
-    #opening-photo + h2 {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+  #opening-photo + h2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    flex-shrink: 1;
+  }
 
-    #opening-photo {
-        height: auto; /* Ensure the image scales properly */
-    }
+  #opening-photo {
+    height: 80vh;
+  }
+
+  .overlay {
+    font-size: clamp(1.6rem, 8vw, 3rem);
+  }
+  .navbar {
+    gap: 10px;
+  }
 }
 
-@media (max-width: 480px) {
-    #opening-photo + h2 {
-        font-size: 1.2rem; /* Further reduce font size for very small screens */
-    }
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(1.2rem, 6vw + 0.2rem, 2.2rem);
+    padding-left: 20px;
+  }
+  .navbar {
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    padding-left: 10px;
+  }
+  .navbar {
+    margin-right: 30px;
+  }
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

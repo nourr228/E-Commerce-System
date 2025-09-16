@@ -118,7 +118,7 @@ div .prod-photo {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-div:hover {
+.div1:hover, .div2:hover, .div3:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-8px);
   transition: all 0.5s ease;
@@ -147,6 +147,18 @@ footer {
   background: #111;
   color: #fff;
   font-family: system-ui, Arial, sans-serif;
+}
+
+.social-media-icons {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.social-media-icons li:hover{
+  transform: scale(1.1);
 }
 
 

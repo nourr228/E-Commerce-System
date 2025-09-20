@@ -75,10 +75,13 @@ a {
 }
 
 .section-title2 {
+  height: 55px;
   font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
   margin: 40px 0 5px 0;
-  font-family: "Work Sans", sans-serif;
-  border-bottom: grey solid 2px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+  border-bottom: grey solid 5px;
+  border-radius: 5px;
 }
 
 .section-description {
@@ -94,9 +97,9 @@ a {
 .section-descriptionC {
   font-size: larger;
   font-family: "Work Sans", sans-serif;
-  color: #ffffff;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
 }
 
 .products {
@@ -135,7 +138,7 @@ a {
   height: 450px;
   text-align: center;
   font-weight: 600;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 div .prod-photo {
@@ -192,7 +195,7 @@ footer {
   transition: transform 0.3s ease-in-out;
 }
 
-#products-page{
+#products-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,11 +214,11 @@ footer {
 }
 
 /* Stack and remove space between section descriptions in header */
-.products-header { 
+.products-header {
   gap: 5px;
   padding-bottom: 50px;
   padding-top: 30px;
- }
+}
 .products-header .section-description,
 .products-header .section-descriptionC {
   display: block;
@@ -224,6 +227,20 @@ footer {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.about-text{
+  max-width: 1200px;
+  font-family: Work Sans, sans-serif;
+  font-size:x-large;
+}
+
+.joinS{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: x-large;
+  text-align: center;
+  font-style: italic;
+  margin: 40px 0;
 }
 
 /* Responsive: stack to 2 then 1 columns */
@@ -245,6 +262,10 @@ footer {
     left: 50%;
     transform: translate(-50%, -30%);
     flex-shrink: 1;
+  }
+
+  .about-text {
+    padding: 0 20px;
   }
 
   #opening-photo {
@@ -274,7 +295,7 @@ footer {
     font-size: clamp(0.85rem, 5.5vw, 1.6rem);
     top: 70%;
   }
-  .products-page main{
+  .products-page main {
     padding-top: 110px;
   }
 }
@@ -313,4 +334,6 @@ body {
   overflow-x: hidden;
 }
 
-.products-page main{ padding-top: 90px; }
+.products-page main {
+  padding-top: 90px;
+}

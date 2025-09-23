@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body>
+  <body class="products-page">
     <header
       style="
         display: flex;
@@ -37,19 +37,57 @@
         </ul>
       </nav>
     </header>
-    <section>
-      <h2>About Us</h2>
-      <p>
-        Welcome to Nouro's Eateria, where we serve delicious and freshly cooked
-        meals right to your door. Our chefs use only the finest ingredients to
-        create mouthwatering dishes that you'll love.
-      </p>
-      <p>
-        At Nouro's Eateria, we believe that food is not just sustenance; it's an
-        experience. That's why we take great care in preparing each meal with
-        love and attention to detail.
-      </p>
-    </section>
+    <main>
+      <section id="products-page">
+        <div class="products-header">
+          <h3 class="section-title" style="color: rgb(255, 255, 255)">
+            Contact Us
+          </h3>
+          <p class="section-description">
+            If you have any questions or feedback, feel free to reach out to us!
+          </p>
+        </div>
+
+        <h2 class="section-title2">Get in Touch!</h2>
+        <div class="about-text">
+          <ul class="icons">
+              <li>
+                <img src="assets/icons/map.png" alt="Location Icon" style="width: 70px; vertical-align: middle;" />
+                <span style="margin-left: 8px;">231 Street, Maadi, Cairo</span>
+              </li>
+              <li>
+                <img src="assets/icons/phone.png" alt="Phone Icon" style="width: 70px; vertical-align: middle;" />
+                <span style="margin-left: 8px;">+20 123 456 7890</span>
+              </li>
+              <li>
+                <img src="assets/icons/email.png" alt="Email Icon" style="width: 70px; vertical-align: middle;" />
+                <span style="margin-left: 8px;">info@noureseataria.com</span>
+              </li>
+        </div>
+
+        <h2 class="section-title2">Send Us a Message!</h2>
+        <div class="contact-form">
+          <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+
+              <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+
+      </section>
+    </main>
     <footer>
       <div id="1">
         <h2>Nouro's Eateria</h2>

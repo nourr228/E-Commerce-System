@@ -3,6 +3,13 @@ body {
   padding: 0;
 }
 
+/* Adjustable contact info sizing */
+:root {
+  --contact-info-width: 340px; /* base width; change this value to adjust */
+  --contact-info-max: 460px; /* maximum width allowed */
+  --contact-info-left-shift: -12px; /* negative pulls box left; set 0 to disable */
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -78,7 +85,8 @@ a {
   height: 55px;
   font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
   margin: 40px 0 5px 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-style: italic;
   border-bottom: grey solid 5px;
   border-radius: 5px;
@@ -138,7 +146,8 @@ a {
   height: 450px;
   text-align: center;
   font-weight: 600;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 div .prod-photo {
@@ -229,18 +238,131 @@ footer {
   margin-right: auto;
 }
 
-.about-text{
+.about-text {
   max-width: 1200px;
   font-family: Work Sans, sans-serif;
-  font-size:x-large;
+  font-size: x-large;
 }
 
-.joinS{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.joinS {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: x-large;
   text-align: center;
   font-style: italic;
   margin: 40px 0;
+}
+
+/* Contact page layout (scoped) */
+#contact-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 1100px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
+}
+.contact-info {
+  flex: 0 1 340px;
+}
+.contact-form {
+  flex: 1 1 520px;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contact-form label {
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 700px;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: system-ui, Arial, sans-serif;
+  box-sizing: border-box;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.submit-button {
+  align-self: flex-start;
+  padding: 10px 20px;
+  background: #403ea4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.submit-button:hover {
+  background: #2f2d86;
+}
+/* Improve spacing inside panels */
+.contact-form,
+.contact-info {
+  background: #f8f8f8;
+  padding: 24px 26px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+.contact-form h2,
+.contact-info h2 {
+  margin-top: 0;
+}
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  #contact-page {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .contact-info,
+  .contact-form {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  #contact-page {
+    padding: 0 14px;
+  }
+  .contact-form,
+  .contact-info {
+    padding: 18px 18px;
+  }
+}
+@media (max-width: 400px) {
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+}
+
+/* On very small screens let it be full width and reset shift */
+@media (max-width: 600px) {
+  .contact-info {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+
+.icons {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 0;
+  margin: 10px 0 0 0;
 }
 
 /* Responsive: stack to 2 then 1 columns */
@@ -249,7 +371,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-   .about-text {
+  .about-text {
     padding: 0 20px;
   }
 }
@@ -340,4 +462,19 @@ body {
 
 .products-page main {
   padding-top: 90px;
+}
+
+.contact-page main {
+  padding-top: 90px;
+}
+
+@media (min-width: 860px) {
+  #contact-page {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  #contact-page .contact-form,
+  #contact-page .contact-info {
+    flex: 1;
+  }
 }

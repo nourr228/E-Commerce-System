@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>FnB Shop</title>
   </head>
-  <body class="products-page">
+  <body class="products-page contact-page">
     <header
       style="
         display: flex;
@@ -19,7 +20,7 @@
         z-index: 1000;
       "
     >
-      <h1>Nouro's Eateria</h1>
+      <h1>FnB Shop</h1>
       <nav>
         <ul class="navbar">
           <li><a href="index.html">Home</a></li>
@@ -49,54 +50,65 @@
         </div>
 
         <h2 class="section-title2">Get in Touch!</h2>
-        <div class="about-text">
+        <div class="icon-text">
           <ul class="icons">
-              <li>
-                <img src="assets/icons/map.png" alt="Location Icon" style="width: 70px; vertical-align: middle;" />
-                <span style="margin-left: 8px;">231 Street, Maadi, Cairo</span>
-              </li>
-              <li>
-                <img src="assets/icons/phone.png" alt="Phone Icon" style="width: 70px; vertical-align: middle;" />
-                <span style="margin-left: 8px;">+20 123 456 7890</span>
-              </li>
-              <li>
-                <img src="assets/icons/email.png" alt="Email Icon" style="width: 70px; vertical-align: middle;" />
-                <span style="margin-left: 8px;">info@noureseataria.com</span>
-              </li>
+            <li>
+              <img
+                src="assets/icons/map.png"
+                alt="Location Icon"
+                style="width: 70px; vertical-align: middle"
+              />
+              <span style="margin-left: 8px">231 Street, Maadi, Cairo</span>
+            </li>
+            <li>
+              <img
+                src="assets/icons/phone.png"
+                alt="Phone Icon"
+                style="width: 70px; vertical-align: middle"
+              />
+              <span style="margin-left: 8px" id="phone-number"
+                >+20 123 456 7890</span
+              >
+            </li>
+            <li>
+              <img
+                src="assets/icons/email.png"
+                alt="Email Icon"
+                style="width: 70px; vertical-align: middle"
+              />
+              <span style="margin-left: 8px" id="email-address"
+                >info@fnbshop.com</span
+              >
+            </li>
+          </ul>
         </div>
 
         <h2 class="section-title2">Send Us a Message!</h2>
         <div class="contact-form">
           <form>
-              <label for="name">Name:</label>
-              <input type="text" id="name" name="name" required />
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-              <label for="email">Email:</label>
-              <input type="email" id="email" name="email" required />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
 
-              <label for="message">Message:</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-              <button type="submit" class="submit-button">Send Message</button>
-            </form>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
         </div>
-
       </section>
     </main>
     <footer>
       <div id="1">
-        <h2>Nouro's Eateria</h2>
+        <h2>FnB Shop</h2>
         <h5>Freshly cooked meals delivered to your door!</h5>
       </div>
       <div id="2">
         <h3 style="font-family: 'Work Sans', sans-serif">Contact Us</h3>
         <p>231 Street<br />Maadi, Cairo</p>
-        <p>Phone: +20 123 456 7890 <br />Email: info@noureseataria.com</p>
+        <p>Phone: +20 123 456 7890 <br />Email: info@fnbshop.com</p>
         <ul class="social-media-icons">
           <li>
             <a href="https://www.facebook.com/"
@@ -115,7 +127,7 @@
           </li>
         </ul>
       </div>
-      <p>© 2025 Nouro's Eateria. All rights reserved.</p>
+      <p>© 2025 FnB Shop. All rights reserved.</p>
     </footer>
   </body>
 </html>

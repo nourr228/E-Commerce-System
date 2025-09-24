@@ -3,13 +3,6 @@ body {
   padding: 0;
 }
 
-/* Adjustable contact info sizing */
-:root {
-  --contact-info-width: 340px; /* base width; change this value to adjust */
-  --contact-info-max: 460px; /* maximum width allowed */
-  --contact-info-left-shift: -12px; /* negative pulls box left; set 0 to disable */
-}
-
 .navbar {
   display: flex;
   align-items: center;
@@ -25,6 +18,8 @@ h1 {
   flex-shrink: 1;
   flex-grow: 0;
   font-size: clamp(1.4rem, 3.2vw + 0.5rem, 3.2rem);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   line-height: 1.1;
 }
 
@@ -32,8 +27,13 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  font-weight: 800;
+  font-weight: 500;
   font-size: larger;
+  font-family: "Work Sans", sans-serif;
+}
+
+a:hover {
+  color: grey;
 }
 
 .hero {
@@ -59,6 +59,7 @@ a {
   font-size: clamp(2rem, 6vw, 4rem);
   padding: 0 1rem;
   flex-shrink: 1;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .overlay2 {
@@ -120,7 +121,6 @@ a {
   grid-row-gap: 5px;
 }
 
-/* Products section grid */
 #products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -178,6 +178,25 @@ div .prod-photo {
 .addToCartbut:hover {
   background-color: #45a049;
 }
+
+.view-all {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #482bd7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-all:hover {
+  background-color: #2f2d86;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -222,7 +241,6 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Stack and remove space between section descriptions in header */
 .products-header {
   gap: 5px;
   padding-bottom: 50px;
@@ -231,7 +249,7 @@ footer {
 .products-header .section-description,
 .products-header .section-descriptionC {
   display: block;
-  margin: 0; /* remove default spacing so they stick */
+  margin: 0; 
   text-align: center;
   width: 60%;
   margin-left: auto;
@@ -253,7 +271,6 @@ footer {
   margin: 40px 0;
 }
 
-/* Contact page layout (scoped) */
 #contact-page {
   display: flex;
   flex-direction: row;
@@ -307,7 +324,6 @@ footer {
 .submit-button:hover {
   background: #2f2d86;
 }
-/* Improve spacing inside panels */
 .contact-form,
 .contact-info {
   background: #f8f8f8;
@@ -319,7 +335,6 @@ footer {
 .contact-info h2 {
   margin-top: 0;
 }
-/* Responsive adjustments */
 @media (max-width: 980px) {
   #contact-page {
     flex-direction: column;
@@ -329,6 +344,12 @@ footer {
   .contact-form {
     flex: 1 1 auto;
     max-width: 100%;
+  }
+
+  body.contact-page .icons {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
   }
 }
 @media (max-width: 560px) {
@@ -347,7 +368,6 @@ footer {
   }
 }
 
-/* On very small screens let it be full width and reset shift */
 @media (max-width: 600px) {
   .contact-info {
     width: 100%;
@@ -365,7 +385,22 @@ footer {
   margin: 10px 0 0 0;
 }
 
-/* Responsive: stack to 2 then 1 columns */
+.icon-text {
+  max-width: 1200px;
+  font-family: Work Sans, sans-serif;
+  font-size: x-large;
+}
+
+#phone-number,
+#email-address {
+  cursor: pointer;
+}
+
+#phone-number:hover,
+#email-address:hover {
+  color: grey;
+}
+
 @media (max-width: 900px) {
   #products {
     grid-template-columns: repeat(2, 1fr);
@@ -405,7 +440,11 @@ footer {
     top: 63%;
   }
   .navbar {
-    gap: 10px;
+    gap: 8px;
+  }
+
+  body.contact-page .contact-form {
+    margin: 100px;
   }
 }
 
@@ -458,6 +497,38 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.view-all {
+  display: block;
+  margin: 24px auto 60px; 
+  padding: 14px 28px;
+  font-size: 1.125rem; 
+  font-weight: 700;
+  background: #403ea4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.15s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+.view-all:hover {
+  background: #2f2d86;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+.view-all:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+@media (max-width: 480px) {
+  .view-all {
+    width: calc(100% - 40px);
+    max-width: 420px;
+    padding: 14px 18px;
+  }
 }
 
 .products-page main {

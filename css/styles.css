@@ -392,12 +392,12 @@ footer {
 }
 
 #phone-number,
-#email-address {
+#email-address, #location {
   cursor: pointer;
 }
 
 #phone-number:hover,
-#email-address:hover {
+#email-address:hover, #location:hover {
   color: grey;
 }
 

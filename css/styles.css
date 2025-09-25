@@ -59,7 +59,7 @@ a:hover {
   font-size: clamp(2rem, 6vw, 4rem);
   padding: 0 1rem;
   flex-shrink: 1;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .overlay2 {
@@ -249,7 +249,7 @@ footer {
 .products-header .section-description,
 .products-header .section-descriptionC {
   display: block;
-  margin: 0; 
+  margin: 0;
   text-align: center;
   width: 60%;
   margin-left: auto;
@@ -392,12 +392,14 @@ footer {
 }
 
 #phone-number,
-#email-address, #location {
+#email-address,
+#location {
   cursor: pointer;
 }
 
 #phone-number:hover,
-#email-address:hover, #location:hover {
+#email-address:hover,
+#location:hover {
   color: grey;
 }
 
@@ -501,9 +503,9 @@ body {
 
 .view-all {
   display: block;
-  margin: 24px auto 60px; 
+  margin: 24px auto 60px;
   padding: 14px 28px;
-  font-size: 1.125rem; 
+  font-size: 1.125rem;
   font-weight: 700;
   background: #403ea4;
   color: #fff;
